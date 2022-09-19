@@ -1,0 +1,28 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Memberfun.master.cs" Inherits="HManage.UI.Memberfun" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server" >
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server" >
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div style="background-color:aqua">
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<h3 style="color:blueviolet;text-align:center;background-color:aqua" >WELCOME TO HOUSING SOCIETY</h3>
+&nbsp;<asp:Button ID="btnhome" runat="server"  Text="HOME" Width="130px"  style="color:blueviolet" OnClick="btnhome_Click" CausesValidation="False" />
+&nbsp;<asp:Button ID="btnRentReport" runat="server" Text="RENT REPORT" Width="130px"  style="color:blueviolet" OnClick="btnaccount_Click" CausesValidation="False" />
+&nbsp;<asp:Button ID="btnSellReport" runat="server"  style="color:blueviolet" OnClick="btnSellReport_Click" Text="SELL REPORT" Width="131px" CausesValidation="False" />
+&nbsp;<asp:Button ID="btnrent" runat="server" Text="RENT NOW"  style="color:blueviolet" OnClick="btnrent_Click" CausesValidation="False" />
+&nbsp;<asp:Button ID="btnsell" runat="server" Text="SELL NOW" Width="130px"  style="color:blueviolet" OnClick="btnsell_Click" CausesValidation="False" />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;
+            <asp:Button ID="btnlogout" runat="server" Text="LOG OUT" Width="130px"  style="color:blueviolet" OnClick="btnlogout_Click" CausesValidation="False" />
+&nbsp; </div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+       
+    </form>
+</body>
+</html>

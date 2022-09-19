@@ -1,0 +1,40 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="AdminFun.master.cs" Inherits="HManage.UI.AdminFun" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>  
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div style="background-color:aqua">
+           
+                 <h3 class="auto-style2" style="text-align:center">WELCOME TO HOUSING SOCIETY...</h3>
+                 
+                     &nbsp;
+                     <asp:LinkButton ID="linkbtnAddSoc" runat="server" OnClick="linkbtnAddSoc_Click" CausesValidation="False">Add Society</asp:LinkButton>
+&nbsp;<asp:LinkButton ID="linkbtnAddHouse" runat="server" OnClick="linkbtnAddHouse_Click" CausesValidation="False">Add House</asp:LinkButton>
+&nbsp;<asp:LinkButton ID="linkbtnAlcHouse" runat="server" OnClick="linkbtnAlcHouse_Click" CausesValidation="False">Allocate House</asp:LinkButton>
+&nbsp;<asp:LinkButton ID="linkbtnSocReport" runat="server" OnClick="linkbtnSocReport_Click" CausesValidation="False">Society Report</asp:LinkButton>
+&nbsp;<asp:LinkButton ID="linkbtnLogOut" runat="server" OnClick="linkbtnLogOut_Click" CausesValidation="False" >log out</asp:LinkButton>
+                   </div>   
+             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+      
+         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;<p>
+            &nbsp;</p>
+        <p>
+            &nbsp;</p>
+        <p>
+            &nbsp;</p>
+        <p>
+            &nbsp;</p>
+    </form>
+</body>
+</html>
