@@ -27,8 +27,14 @@ namespace HManage.UI
                 hSell.UserID = int.Parse(txtuid.Text);
                 hSell.Sell= float.Parse(txtsprice.Text);
                 SellService sellService = new SellService();
-                sellService.AddSell(hSell);
-                lbnmsg.Text = "Record Added";
+                bool result = sellService.ValidateSell(hSell.HID, hSell.SName, hSell.UserID);
+                if (result)
+                {
+                    sellService.AddSell(hSell);
+                    lbnmsg.Text = "Sell is added";
+                }
+                else
+                    lbnmsg.Text = "invalid Details";
             }
             catch (Exception ex)
             {

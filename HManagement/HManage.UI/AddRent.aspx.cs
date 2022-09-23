@@ -28,9 +28,15 @@ namespace HManage.UI
                 hRent.UserID = int.Parse(txtuid.Text);
                 hRent.Rent = float.Parse(txtrent.Text);
                 RentService rentService = new RentService();
-                rentService.AddRent(hRent);
-                lbnmsg.Text = "Record Added";
-                
+                bool result = rentService.ValidateRent(hRent.HID,hRent.SName,hRent.UserID);
+                if (result)
+                {
+                    rentService.AddRent(hRent);
+                    lbnmsg.Text = "Rent is added";
+                }
+                else
+                    lbnmsg.Text = "invalid Details";
+
             }
             catch (Exception ex)
             {

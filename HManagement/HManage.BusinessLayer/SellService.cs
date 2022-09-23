@@ -75,5 +75,17 @@ namespace HManage.BusinessLayer
                 throw;
             }
         }
+        public bool ValidateSell(int HID, string SName, int UserID)
+        {
+            try
+            {
+                return sellRepository.ValidateSell(HID, SName, UserID);
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
     }
 }

@@ -75,5 +75,17 @@ namespace HManage.BusinessLayer
                 throw;
             }
         }
+        public bool ValidateRent(int HID, string SName,int UserID)
+        {
+            try
+            {
+                return rentRepository .ValidateRent(HID, SName,UserID);
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
     }
 }

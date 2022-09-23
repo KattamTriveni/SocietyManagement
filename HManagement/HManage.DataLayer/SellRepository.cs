@@ -120,5 +120,36 @@ namespace HManage.DataLayer
                 throw;
             }
         }
+        public bool ValidateSell(int HID, string SName, int UserID)
+        {
+            try
+            {
+
+                command = new SqlCommand($"select * from UserMst where HID={HID} and  SName='{SName}' and UserID={UserID}", connection);
+                connection.Open();
+                command.ExecuteNonQuery();
+                SqlDataReader dr = command.ExecuteReader();
+                if (dr.HasRows)
+                {
+
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+
+
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            finally
+            {
+                connection.Close();
+            }
+        }
     }
 }

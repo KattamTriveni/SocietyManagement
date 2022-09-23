@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Web.Routing;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
@@ -31,8 +32,15 @@ namespace HManage.UI
                 user.UserName = txtuname.Text;
                 user.Passwords = txtpwd.Text;
                 UserService userService = new UserService();
-                userService.AddUser(user);
-                lbnmsg .Text = "Record Added";
+                bool result = userService.ValidateHouse(user.HID,user.SName);
+                if (result)
+                {
+                    userService.AddUser(user);
+                    lbnmsg.Text = "Member details are added";
+                }
+                else
+                    lbnmsg.Text = "invalid Details";
+              
             }
             catch (Exception ex)
             {

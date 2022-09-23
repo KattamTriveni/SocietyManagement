@@ -118,5 +118,36 @@ namespace HManage.DataLayer
                 throw;
             }
         }
+        public bool ValidateSociety(string sname)
+        {
+            try
+            {
+
+                command = new SqlCommand($"select * from Society where SName='{sname}'", connection);
+                connection.Open();
+                command.ExecuteNonQuery();
+                SqlDataReader dr = command.ExecuteReader();
+                if (dr.HasRows)
+                {
+
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+
+
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            finally
+            {
+                connection.Close();
+            }
+        }
     }
 }

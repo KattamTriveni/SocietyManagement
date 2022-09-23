@@ -22,6 +22,14 @@
         .auto-style7 {
             width: 152px;
         }
+        .auto-style8 {
+            width: 152px;
+            height: 301px;
+        }
+        .auto-style9 {
+            width: 282px;
+            height: 301px;
+        }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server" >
@@ -65,8 +73,8 @@
         </td>
     </tr>
     <tr>
-        <td class="auto-style7">&nbsp;</td>
-        <td class="auto-style5">
+        <td class="auto-style8"></td>
+        <td class="auto-style9">
             <asp:Label ID="lbnmsg" runat="server"></asp:Label>
             <br />
             <br />

@@ -22,6 +22,10 @@
 &nbsp; </div>
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
             </asp:ContentPlaceHolder>
+         <hr />
+            <footer>
+                <p>&copy; <%--To learn more about bundling scripts in ScriptManager see https://go.microsoft.com/fwlink/?LinkID=301884 --%>- @Housing Society Management</p>
+            </footer>
        
     </form>
 </body>

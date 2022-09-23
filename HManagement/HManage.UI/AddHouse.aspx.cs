@@ -27,8 +27,14 @@ namespace HManage.UI
                 house.Typ = txttype.Text;
                 house.SName = txtsname.Text;
                 HouseService houseService = new HouseService();
-                houseService.AddHouse(house);
-                lbnmsg .Text = "Record Added";
+                bool result =houseService.ValidateSociety (house.SName);
+                if (result)
+                {
+                    houseService.AddHouse(house);
+                    lbnmsg .Text = "Record Added";
+                }     
+                else
+                    lbnmsg .Text = "invalid details";
             }
             catch (Exception ex)
             {

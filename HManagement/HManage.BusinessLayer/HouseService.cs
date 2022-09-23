@@ -74,5 +74,17 @@ namespace HManage.BusinessLayer
                 throw;
             }
         }
+        public bool ValidateSociety(string sname)
+        {
+            try
+            {
+                return houseRepository.ValidateSociety(sname);
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
     }
 }

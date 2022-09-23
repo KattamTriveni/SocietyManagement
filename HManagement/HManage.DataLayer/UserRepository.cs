@@ -32,7 +32,7 @@ namespace HManage.DataLayer
                 connection.Close();
             }
         }
-        
+
         public void DeleteUser(int UserId)
         {
             try
@@ -50,7 +50,7 @@ namespace HManage.DataLayer
                 connection.Close();
             }
         }
-        public void UpdateUser(int UserID,string FullName,string Email,string Mobile,int HID,string SName,int Member,string UserName,string Passwords)
+        public void UpdateUser(int UserID, string FullName, string Email, string Mobile, int HID, string SName, int Member, string UserName, string Passwords)
         {
             try
             {
@@ -96,7 +96,7 @@ namespace HManage.DataLayer
 
                 throw;
             }
-            
+
         }
         public List<User> GetAllUsers()
         {
@@ -104,7 +104,7 @@ namespace HManage.DataLayer
             try
             {
                 List<User> users = new List<User>();
-                command = new SqlCommand($"Select * from UserMst",connection);
+                command = new SqlCommand($"Select * from UserMst", connection);
                 connection.Open();
                 SqlDataReader dr = command.ExecuteReader();
                 while (dr.Read())
@@ -128,14 +128,14 @@ namespace HManage.DataLayer
 
                 throw;
             }
-            
-            
+
+
         }
         public bool ValidateUser(string uname, string pwd)
         {
             try
             {
-                
+
                 command = new SqlCommand($"select * from UserMst where UserName='{uname}' and Passwords='{pwd}'", connection);
                 connection.Open();
                 command.ExecuteNonQuery();
@@ -149,13 +149,44 @@ namespace HManage.DataLayer
                 {
                     return false;
                 }
-                
+
 
             }
             catch (Exception)
             {
 
                 throw;
+            }
+        }
+        public bool ValidateHouse(int HID, string SName)
+        {
+            try
+            {
+
+                command = new SqlCommand($"select * from House where HID={HID} and  SName='{SName}'", connection);
+                connection.Open();
+                command.ExecuteNonQuery();
+                SqlDataReader dr = command.ExecuteReader();
+                if (dr.HasRows)
+                {
+
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+
+
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            finally
+            {
+                connection.Close();
             }
         }
     }

@@ -86,5 +86,17 @@ namespace HManage.BusinessLayer
                 throw;
             }
         }
+        public bool ValidateHouse(int HID,string SName)
+        {
+            try
+            {
+                return userRepository.ValidateHouse(HID,SName);
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
     }
 }
